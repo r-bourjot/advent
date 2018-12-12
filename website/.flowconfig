@@ -1,0 +1,17 @@
+[ignore]
+.*/dist/.*
+.*/__tests__.*
+
+[libs]
+flow-typed
+
+[options]
+module.name_mapper='^website/\(.*\)' -> '<PROJECT_ROOT>/src/\1'
+
+[version]
+
+[strict]
+nonstrict-import
+unsafe-getters-setters
+untyped-import
+untyped-type-import

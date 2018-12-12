@@ -1,0 +1,59 @@
+@import '~scss/variables';
+
+html {
+	box-sizing: border-box;
+	color: $font-color;
+	font-family: $font-family;
+	font-size: $font-size;
+	letter-spacing: .01rem;
+	line-height: $line-height;
+}
+
+body, html {
+	background-color: $background-color;
+	margin: 0;
+	min-height: 100vh;
+	padding: 0;
+	width: 100vw;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+	color: inherit;
+	font-family: inherit;
+}
+
+body > div {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.loader {
+	align-items: center;
+	display: flex;
+	height: 100vh;
+	justify-content: center;
+	width: 100vw;
+}
+
+.accent-color {
+	color: $accent-color;
+}
+
+.minor-accent-color {
+	color: $minor-accent-color;
+}
+
+.line-through {
+	text-decoration: line-through;
+}
+
+.btm-xl {
+	margin-bottom: $space-xxl;
+}
+
+.top-xl {
+	margin-top: $space-xxl;
+}

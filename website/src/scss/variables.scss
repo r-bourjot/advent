@@ -1,0 +1,41 @@
+$scale: (8px, 11px, 16px, 22px, 32px, 45px, 64px, 90px, 128px);
+
+@function size-scale($n) {
+	@if ($n == 'max') { @return nth($scale, length($scale)); }
+	@return nth($scale, $n);
+}
+
+$font-size-index: 4;
+$line-height-shift: 1;
+
+$font-size-xs: size-scale($font-size-index - 2);
+$line-height-xs: size-scale($font-size-index - 2 + $line-height-shift);
+$font-size-s: size-scale($font-size-index - 1);
+$line-height-s: size-scale($font-size-index - 1 + $line-height-shift);
+$font-size: size-scale($font-size-index);
+$line-height: size-scale($font-size-index + $line-height-shift);
+$font-size-l: size-scale($font-size-index + 2);
+$line-height-l: size-scale($font-size-index + 3);
+
+$space-xxs: size-scale($font-size-index - 3);
+$space-xs: size-scale($font-size-index - 2);
+$space-s: size-scale($font-size-index - 1);
+$space-m: size-scale($font-size-index);
+$space-l: size-scale($font-size-index + 1);
+$space-xl: size-scale($font-size-index + 2);
+$space-xxl: size-scale($font-size-index + 3);
+$space-ridiculous: size-scale('max');
+
+
+$font-family: 'Vollkorn', serif;
+$font-color: rgba(0, 0, 0, .8);
+$font-color-disabled: rgba(0, 0, 0, .54);
+
+$background-color: #f1eed9;
+$white: #fff;
+$accent-color: #e87a0c;
+$minor-accent-color: #0d5bff;
+
+$icon-height: 46px;
+$break-point: 780px;
+$max-width: 750px;
